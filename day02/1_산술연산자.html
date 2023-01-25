@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>산술연산자</title>
+</head>
+<body>
+  <h1>자바스크립트 산술연산자</h1>
+  <script>
+    //typeof 연산자
+    console.log(typeof '안녕');
+    console.log(typeof 15)
+    console.log(typeof typeof 15)
+
+    //산술연산자 - 덧셈
+    console.log(10+20); //숫자 + 숫자 = 숫자
+    console.log('안녕'+10); //문자열 + 숫자 = 문자열
+    console.log(10+'안녕'); //문자열 + 숫자 = 문자열
+    console.log('안녕'+'반가워'); //문자열 + 문자열 = 문자열
+    console.log(10+5+''+7);
+    console.log(typeof 15+7);
+    
+    //산술연산자 - 뺄셈
+    console.log(5-1); //숫자 - 숫자 = 숫자
+    console.log('안녕'-10); //문자열 - 숫자 = NaN(Not - a Number)
+    console.log(typeof('안녕'-10)); //number
+    console.log(10-'안녕'); //문자열 - 숫자 = NaN
+    console.log(typeof(10-'안녕')); //number
+    console.log('안녕'-'반가워'); //문자열 + 문자열 = NaN
+    
+    //산술연산자 - 곱셈
+    console.log(5*2); //숫자 * 숫자 = 숫자
+    console.log('안녕'*10); //문자열 * 숫자 = NaN
+    console.log(typeof('안녕'*10)); //number
+    console.log(10*'안녕'); //문자열 * 숫자 = NaN
+    console.log(typeof(10*'안녕')); //number
+    console.log('안녕'*'반가워'); //문자열 * 문자열 = NaN
+    
+    //산술연산자 - 나눗셈
+    console.log(10/2); //숫자 / 숫자 = 숫자
+    console.log(10/0); //숫자 / 0 = Infinity
+    console.log(typeof (10/0)); //number
+    console.log('안녕'/10); //문자열 / 숫자 = NaN
+    console.log(typeof('안녕'/10)); //number
+    console.log('안녕'/0); //문자열 / 0 = NaN
+    console.log(10/'안녕'); //문자열 / 숫자 = NaN
+    console.log(typeof(10/'안녕')); //number
+    console.log('안녕'/'반가워'); //문자열 / 문자열 = NaN
+    
+    //산술연산자 - 나머지
+    console.log(10%3);
+  </script>
+</body>
+</html>

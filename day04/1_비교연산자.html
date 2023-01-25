@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교연산자</title>
+</head>
+<body>
+  <h1>비교 연산자</h1>
+  <script>
+    // 비교연산자의 피연산자 자리에는 어떤 타입이 올 수 있을까?
+    console.log(10 > '10');
+    console.log(10 >= '10');
+    console.log('a' < 'b'); //아스키코드
+    console.log('5' == 53);
+    console.log('a' == 97);
+    console.log('apple' == 'apple');
+
+    console.log('5' == 5); //true
+    console.log('5' === 5); //false
+    console.log('5' != 5); //false
+    console.log('5' !== 5); //true
+
+    console.log(0.2 + 1 == 1.2);
+
+    let a = 0.2;
+    let b = 0.1;
+    let sum = a + b;
+    console.log(sum == 0.3);
+    console.log(sum);
+  </script>
+</body>
+</html>

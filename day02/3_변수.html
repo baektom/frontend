@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수2</title>
+</head>
+<body>
+  <script>
+    var age = 20;
+    console.log(age);
+    age = 50;
+    console.log(age);
+    age = '안녕';
+    console.log(age);
+
+    console.log(name);
+    console.log(typeof name);
+
+    function f() {
+      variable1 = 10;
+      var variable2 = 20;
+    }
+    f();
+    console.log(variable1);
+    // console.log(variable2);
+
+    var day = 15; //변수 선언과 최초값 대입(초기화)
+    day = 16; //재할당(다른 값을 대입)
+    console.log(day);
+
+    var day; //변수 재선언(똑같은 이름의 변수 생성)
+    console.log(day);
+    day = 50;
+    console.log(day);
+
+    let number; //재선언 불가능
+    number = 10;
+    console.log(number);
+
+    //암호화 3
+    const secret = 3; //상수화된 변수 선언과 초기화(재할당, 재선언 불가능)
+    // secret = 4;
+    console.log(secret);
+    //비밀번호 암호회 * 3
+    KEY = 3;
+    1104 * KEY;
+</script>
+</body>
+</html>

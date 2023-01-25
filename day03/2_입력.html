@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력</title>
+</head>
+<body>
+  <!-- <h2>당신의 10년 후 나이!</h2> -->
+  <h2>연산자 실습</h2>
+  <script>
+    // 사용자에게 나이를 입력받아서 10년, 20년 후 나이 출력하기
+    // ↓
+    // let age = Number(prompt('나이를 입력해주세요!'));
+    // age = Number(age);
+    // document.write(Number(age) + 10);
+    // document.write(Number(age) + 20);
+    // document.write('<p>당신의 10년 후 나이: ' + (age + 10) + '살</p>');
+    // document.write('<p>당신의 10년 후 나이: ' + (age + 20) + '살</p>');
+
+    // 사용자에게 정수 하나를 입력 받아서 해당 정수를 4로 나눴을 때, 몫과 나머지 출력하기
+    // 25 -> 4로 나눴을 때 몫: 6
+    //    -> 4로 나눴을 때 나머지: 1
+    // ↓
+    // let num1 = Number(prompt('정수를 입력해주세요'));
+    // document.write('<p>4로 나눴을 때 몫: ' + parseInt((num1 / 4)) + '</p>');
+    // document.write('<p>4로 나눴을 때 나머지: ' + (num1 % 4) + '</p>');
+
+    // 사용자에게 두 자릿수 정수를 입력 받아서 해당 정수의 십의 자리와 일의 자리를 출력하기
+    // ↓
+    // let num2 = Number(prompt('두 자릿수 정수를 입력해주세요'));
+    // document.write('<p>십의 자리는' + parseInt((num2 / 10)) + 
+    //   ', 일의 자리는 ' + (num2 %10) + '</p>');
+
+    // 노래 한 곡당 300원인 코인노래방이 있다.
+    // 사용자에게 금액을 입력받아서 부를 수 있는 노래 곡수와 잔돈 출력하기
+    // 1600 --> 부를 수 있는 노래는 5곡, 잔돈 100원
+    // ↓
+    // let money = parseInt(prompt('금액을 넣어주세요'));
+    // const price = 300;
+    // 중간에 바꾸면 안되는 변수는 const 사용하되 다른 값으로 변경하지 못하게 막음
+    // let songCnt = parseInt((money / price))
+    // songCnt라는 변수를 만들어서 그 저장 공간에 money에 들어있는 값을 price에 
+    // 들어있는 값으로 나눈 값을 정수로 바꿔 값을 넣어줌
+    // document.write('<p>당신이 부를 수 있는 노래는 ' + songCnt + '곡</p>');
+    // document.write('<p>잔돈은 ' + (money % price) + '원</p>');
+
+    // 사용자에게 국어, 영어, 수학 점수를 입력 받아서 평균 점수 출력하기
+    // ↓
+    let korScore = Number(prompt('국어 점수를 입력해주세요'));
+    let engScore = Number(prompt('영어 점수를 입력해주세요'));
+    let mathScore = Number(prompt('수학 점수를 입력해주세요'));
+    let sumScore = korScore + engScore + mathScore
+    let avg = sumScore / 3;
+    document.write('<p>평균 점수는 ' + avg + '</p>');
+
+  </script>
+</body>
+</html>

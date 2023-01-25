@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 80%;
+      height: 300px;
+      border: 3px solid black;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    #res-div {
+      background-color: black;
+    }
+
+    p {
+      color: white;
+      font-size: 30px;
+      font-weight: 900px;
+    }
+    
+    span {
+      color: yellow;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>input과 버튼으로 입력받기</h2>
+  <div>
+    <label>
+      숫자를 입력하세요!
+      <input id="input1" type="number">
+    </label>
+    <button onclick="getSum()">클릭!</button>
+  </div>
+  <div id="res-div">
+    <p>결과는 <span id="result1">결과자리</span> 입니다.</p>
+  </div>
+  <script>
+    function getSum() {
+      let num1 = document.getElementById('input1').value;
+      // console.log('num1')
+      let total = 0;
+      for(let i = 1; i <= num1; i++) {
+        total += i;
+      }
+      document.getElementById('result1').textContent = total;
+    }
+  </script>
+</body>
+</html>

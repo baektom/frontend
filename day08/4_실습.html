@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap {
+      width: 90%;
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 20px;
+    }
+    #container {
+      border: 1px solid gray;
+      display: flex;
+    }
+    .ex1 {
+      border: 1px dotted gray;
+      margin: 0 20px;
+    }
+    #res-div {
+      background-color: black;
+      /* height: 200px; */
+      text-align: center;
+    }
+
+    p {
+      color: white;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 200px;
+    }
+    span {
+      color: yellow;
+      font-size: 50px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h2>함수 실습</h2>
+  <div id="wrap">
+    <div id="container">
+      <div class="ex1">
+        <h3>
+          input 태그를 통해 정수 두 개를 입력받고,
+          첫 번째 정수부터 두 번째 정수까지 총합 출력하기
+        </h3>
+        <label>정수1 <input id="input1-1" type="number"></label>
+        <br>
+        <label>정수2 <input id="input1-2" type="number"></label>
+        <button onclick="button1()">클릭1</button>
+      </div>
+      <div class="ex1">
+        <h3>
+          사용자에게 정수 한 개를 입력받아서 1부터 그 숫자까지 띄어쓰기로 출력하기
+        </h3>
+        <label>정수1 <input id="input2" type="number"></label>
+        <button onclick="button2()">클릭!</button>
+      </div>
+      <div class="ex1">
+        <h3>
+          사용자에게 단을 입력받아서 구구단 출력하기
+        </h3>
+        <label>단입력 >> <input id="input3" type="number"></label>
+        <button onclick="button3()">클릭!</button>
+      </div>
+    </div>
+    <div id="res-div">
+      <p>결과는 <span id="result">결과자리</span> 입니다.</p>
+    </div>
+  </div>
+  <script>
+    function button1() {
+      let num1 = Number(document.getElementById('input1-1').value);
+      let num2 = Number(document.getElementById('input1-2').value);
+
+      if (num1 > num2) {
+        alert('두 번째 정수를 더 큰 수로 입력해주세요!');
+        // return ;
+      }
+
+      // console.log(typeof num1);
+      // console.log(typeof num2);
+      // console.log(num1 + num2);
+
+      let total = 0;
+      for (let i = num1; i <= num2; i++) {
+        total += i;
+      }
+      // console.log(total);
+      document.getElementById('result').textContent = total;
+    }
+
+    function button2() {
+      let num = Number(document.getElementById('input2').value);
+
+      let res = '';
+      for (let i = 1; i <= num; i++) {
+        res += i + ' '; // res = res + i + ' ';
+      }
+      console.log(res);
+    }
+    
+    function button3() {
+      let dan = Number(document.getElementById('input3').value);
+      let res = `<h3>---${dan}단---<h3>`;
+      for (let i = 1; i <= 9; i++) {
+        res += `${dan} X ${i} = ${(dan*i)}<br>`;
+      }
+      document.getElementById('result').innerHTML = res;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문</title>
+</head>
+<body>
+  <script>
+    document.write('for문 위쪽의 문장 <br>');
+    for(let i = 0; i < 20; i += 5) {
+      document.write(i + '배상엽');
+      document.write('<br>');
+    }
+    document.write('for문 아래쪽 문장');
+
+    document.write('<br>');
+    document.write('<h2>실습</h2>')
+
+    // 1. 1 2 3 4 ... 10 출력하기
+    // ↓
+    document.write('<br>');
+    for (let i = 1; i <= 10; i++) {
+      document.write(i + ' ');
+    }
+    document.write('<br>');
+
+    // 2. 10 9 8 7 ... 1 출력하기
+    // ↓
+    document.write('<br>');
+    for (let i = 10; i >= 1; i--) {
+      document.write(i + ' ');
+    }
+    document.write('<br>');
+    
+    // 3. 1부터 10까지 총합 출력하기
+    // ↓
+    document.write('<br>');
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+      document.write(`${i}, ${sum}`)
+      sum = sum + i;
+      document.write(` -> sum값: ${sum} <br>`)
+    }
+    document.write('총합: ' + sum);
+    document.write('<br>');
+
+    // 4. 1부터 10까지 누적 곱 출력하기
+    // ↓
+    document.write('<br>');
+    let mul = 1;
+    for (let i = 1; i <= 10; i++) {
+      document.write(`${i}, ${mul}`)
+      mul = mul * i;
+      document.write(` -> mul값: ${mul} <br>`)
+    }
+    document.write('결과: ' + mul);
+    document.write('<br>');
+
+    // 5. 1부터 100까지 숫자 중 3의 배수 출력하기
+    // 3 6 9 10 ... 99
+    //조건식이 3의 배수 일 때
+    // ↓
+    document.write('<br>');
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 == 0) {
+        document.write(i + ' ');
+      }
+    }
+    document.write('<br>');
+
+    // 조건식이 3의 배수가 아닐 때
+    // ↓
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 != 0) {
+        continue; //자신을 감싸는 반복문의 다음 반복 실행
+      }
+        document.write(i + ' ');
+    }
+    document.write('<br>');
+
+    // 6. 구구단 3단 출력하기
+    // ---3단---
+    // 3 X 1 = 3
+    // 3 X 2 = 6
+    // ...
+    // 3 X 9 = 27
+    // ↓
+    document.write(`<br>---3단---<br>`);
+    for (let i = 1; i < 10; i++) {
+      // document.write('3 X ' + i + ' = ' + (i*3) + '<br>');
+      // ↓
+      document.write(`3 X ${i} = ${(i*3)}<br>`);
+    }
+    document.write('<br>');
+
+    
+    document.write(`<br>`);
+    for (let i = 1; i < 10; i++) {
+      if(i == 2) {
+        continue;
+      }
+      document.write(i + ' ');
+    }
+    document.write('<br>');
+    
+    document.write('<br>');
+    let a = 10
+    let name = '배상엽';
+    document.write(name + '님의 나이는 ' + a + '살 입니다.<br>');
+    document.write(`${name}님의 나이는 ${a}살 입니다<br>`)
+    document.write('<br>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+</head>
+<body>
+  <h2>배열</h2>
+  <script>
+    // 요소가 모여있는 배열
+    let ar2 = [10, '안녕', true];
+    console.log(ar2);
+
+    // 인덱스 번호와 인덱스 연산자
+    // length 프로퍼티
+    console.log('길이: ' + ar2.length);
+
+    for (let i = 0; i< ar2.length; i++) {
+      console.log(ar2[i]);
+    }
+
+    // 배열을 위한 반복문
+    // for~in
+    //in을 쓰면 알아서 배열의 길이로 판단
+    for (let i in ar2) { 
+      console.log(i);
+    }
+
+    // for~of
+    for (let a of ar2) {
+      console.log(a);
+    }
+
+    console.log(ar2);
+    ar2[0] = 100;
+    console.log(ar2);
+
+    let ar3 = [10, 20, ['안녕', '반가워']];
+    // ar3의 길이(요소의 갯수)는?
+    // 답: 3개
+    console.log(ar3.length);
+    for (let element of ar3) {
+      console.log(element);
+    }
+
+    ar3[2][1] = '월요일';
+    console.log(ar3);
+  </script>
+</body>
+</html>

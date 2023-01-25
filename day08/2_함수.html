@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+  <h2>함수</h2>
+  <button onclick="f1()">클릭해보세요!</button>
+  <script>
+    function f1() {
+      console.log('클릭!');
+      console.log('반가워!');
+    }
+
+    function print(name, age) { 
+      // name이라는 변수는 매개변수, parameter
+      // 매개변수에는 함수를 사용할 때, 소괄호 안에서 넘겨준 값(인자값, 인수값, argument)이 대입된다.
+      console.log('만나서 반갑습니다.');
+      console.log('제 이름은 ' + name + '입니다.');
+      console.log('제 나이는 ' + age + '살 입니다.');
+    }
+
+    print('홍길동', 16);
+    console.log('오늘은 수요일');
+    print('김철수', 20);
+
+    // 함수 사용 결과를 값으로 되돌리기
+    // 매개변수로 전달받은 배열 속 요소의 총 합을 알아내는 함수
+    function getSumOfArray(ar) {
+      let total = 0;
+      for(let element of ar) {
+        total += element;
+      }
+      console.log(total);
+      return total;
+      // return: 함수 사용 결과를 값을 되돌려준다.
+    }
+
+    console.log(getSumOfArray([1, 5, 4]) /3);
+    getSumOfArray([10, 20, 30, 40]);
+
+    console.log(Math.floor(3.14));
+  </script>
+</body>
+</html>

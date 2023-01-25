@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문 실습</title>
+  <style>
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: blue;
+      font-size: 50px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <h2>결과</h2>
+  <script>
+    // 사용자에게 정수를 입력받고, 정수가 짝수라면 <p>짝수</p>라고 출력,
+    // 정수가 홀수라면 <p>홀수</p>라고 출력하기
+    // ↓
+    let num = Number(prompt('정수를 입력해주세요'));
+    document.write('<p>');
+    if (num%2==0) {
+      document.write('짝수');
+    } else {
+      document.write('홀수');
+    }
+    document.write('</p>');
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼항연산자</title>
+</head>
+<body>
+  <h1>삼항연산자</h1>
+  <script>
+    // console.log(true ? '안녕' : 10);
+    
+    // 사용자에게 나이를 입력받고, 성인이라면 성인입니다. 
+    // 미성년자라면 미성년자입니다. 출력하기
+    // ↓
+    // let age = Number(prompt('나이를 입력해주세요'));
+    // document.write(age >= 20 ? '성인입니다.' : '미성년자입니다.');
+
+    // 1. 사용자에게 점수 두 개를 입력받아서 둘 중 더 큰 수와 두 수의 차(큰 수 - 작은 수) 출력하기
+    // 10, 25
+    // 둘 중 더 큰 수는 25입니다.
+    // 두 수의 차는 15입니다.
+    // ↓
+    // let num1 = Number(prompt('점수1을 입력해주세요.'));
+    // let num2 = Number(prompt('점수2를 입력해주세요.'));
+    // document.write(num1 > num2 ? 
+    // '둘 중 더 큰 수는 ' + num1 + '이고, 두 수의 차는 ' + (num1 - num2) + '입니다.' 
+    // : '둘 중 더 큰 수는 ' + num2 + '이고, 두 수의 차는 ' + (num2 - num1) + '입니다.');
+
+    // 2. 사용자에게 나이를 입력받아서 나이가 10세 이상, 20세 이하라면 500원
+    // 그 외의 나이라면 무료라고 출력하기
+    // ↓
+    // let age = Number(prompt('나이를 입력해주세요'));
+    // document.write(age >= 10 && age <= 20 ? '500원' : '무료');
+    // document.write(age < 10 || age > 20 ? '500원' : '무료');
+
+    // 3. 사용자에게 키와 나이를 입력받아서 150cm 이상, 8살 이상이라면
+    // 놀이기구 탑승 가능!, 그렇지 않다면 놀이기구 탑승 불가능! 출력하기
+    // ↓
+    // let height = Number(prompt('키를 입력해주세요'));
+    // let age = Number(prompt('나이를 입력해주세요'));
+    // document.write(height >= 150 && age >= 8 ? 
+    // '놀이기구 탑승 가능!' : '놀이기구 탑승 불가능!');
+
+    // 4. 한 상자당 20개의 라면이 들어간다.
+    // 사용자에게 라면의 갯수를 입력받아서 필요한 상자의 갯수를 출력하기
+    // 20 --> 1
+    // 22 --> 2
+    // 40 --> 2
+    // ↓
+    // let ramen = Number(prompt('라면의 갯수를 입력해주세요'));
+    // let result = ramen%20 == 0 ? parseInt(ramen/20) : parseInt(ramen/20)+1;
+    // document.write('당신은 ' + result + '개의 상자가 필요합니다.');
+
+    // 문제. 둘 중 더 큰 수를 출력하되, 둘이 같은 경우에는 같다라고 출력하기
+    let num1 = Number(prompt('숫자1을 입력해주세요'));
+    let num2 = Number(prompt('숫자2를 입력해주세요'));
+    document.write(num1 > num2 ? num1 : num1 < num2 ? num2 : '두 수가 같다.')
+  </script>
+</body>
+</html>
